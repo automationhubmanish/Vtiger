@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AutomateVTiger">
+
+<listeners> 
+			<listener class-name ="com.evs.vtiger.testcases.ReporterManager" />
+	
+			<listener class-name="com.evs.vtiger.testcases.TestListener" />
+	
+</listeners>
+
+	<test thread-count="5" name="ValidateMarkeringLead">
+		<parameter name="Browser" value="Chrome" />
+		<!-- <packages> <package name="com.evs.vtiger.testcases"/> -->
+		<classes>
+			<class name="com.evs.vtiger.testcases.ValidateLeadsFunctionality" />
+			<class name="com.evs.vtiger.testcases.ValidateSalesAccount" />
+			<class name="com.evs.vtiger.testcases.ValidateSalesPotential" />
+		</classes>
+		<!-- </packages> -->
+	</test> <!-- VTiger -->
+</suite> <!-- AutomationTesting -->
